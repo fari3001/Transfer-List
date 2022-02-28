@@ -1,19 +1,20 @@
-import React from 'react'
-import AccountDetails from '../AccountDetails'
-import Transfer from '../Transfer'
-import Transactions from '../Transactions'
+import AccountDetails from '../Accounts/AccountDetails'
+import Transfer from '../Transfer/TransferOne'
+import TransactionsTwo from '../Transactions/TransactionsTwo'
 import '../../App.css'
 
 
-export default function InterfaceOne() {
+export default function InterfaceOne({amountOne, amountTwo, setAmountOne, setAmountTwo, description, setDescription}) {
+
+
   return (
     <div className='wrapper'>
       <div className='header'>
-          <AccountDetails />
-          <Transfer />
+          <AccountDetails amountOne={amountOne} setAmountOne={setAmountOne} />
+          <Transfer amountOne={amountOne} setAmountOne={setAmountOne} description={description} setDescription={setDescription} />
       </div>
       <div className='footer'>
-          <Transactions />
+          <TransactionsTwo />
       </div>
     </div>
   )

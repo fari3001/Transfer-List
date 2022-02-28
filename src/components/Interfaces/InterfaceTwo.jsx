@@ -1,9 +1,10 @@
-import React from 'react'
-import AccountDetails from '../AccountDetails'
-import Transfer from '../Transfer'
-import Transactions from '../Transactions'
+import React, {useState} from 'react'
+import AccountDetails from '../Accounts/AccountDetailsTwo'
+import Transfer from '../Transfer/TransferOne'
+import TransactionsOne from '../Transactions/TransactionsOne'
 
-export default function InterfaceTwo() {
+export default function InterfaceTwo({amountOne, setAmountOne}) {
+
   return (
     <div className='wrapper'>
       <div className='header'>
@@ -11,7 +12,7 @@ export default function InterfaceTwo() {
           <Transfer />
       </div>
       <div className='footer'>
-          <Transactions />
+          <TransactionsOne amountOne={amountOne} setAmountOne={amountOne}/>
       </div>
     </div>
   )
