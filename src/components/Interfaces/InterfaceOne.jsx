@@ -5,7 +5,7 @@ import '../../App.css'
 
 
 export default function InterfaceOne({amountOne, amountTwo, setAmountOne, setAmountTwo, description, setDescription}) {
-
+  console.log(amountOne)
 
   return (
     <div className='wrapper'>

@@ -12,7 +12,7 @@ export default function InterfaceTwo({amountOne, setAmountOne}) {
           <Transfer />
       </div>
       <div className='footer'>
-          <TransactionsOne amountOne={amountOne} setAmountOne={amountOne}/>
+          <TransactionsOne amountOne={amountOne} setAmountOne={setAmountOne}/>
       </div>
     </div>
   )
