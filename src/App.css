@@ -63,3 +63,8 @@ h1, h2 {
   padding: 1rem 1rem 1rem 0.5rem;
   background-color: #f5f5f5;
 }
+
+.transaction-statement {
+  display: flex;
+  justify-content: space-between;
+}

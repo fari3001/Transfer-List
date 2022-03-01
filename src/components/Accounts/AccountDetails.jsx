@@ -2,16 +2,19 @@ import React from 'react'
 import Account from '../../Accounts.json'
 import '../../App.css'
 
-export default function AccountDetails({amount, setAmount}) {
+export default function AccountDetails({amountOne, total, setTotal, description}) {
   const Accounts = Account.accounts
-  console.log(Accounts[0].name)
+  // console.log(description)
 
   return (
     <div className='account-wrapper'>
             
               <div className='flex-wrapper'> 
                 <h1>{Accounts[0].name}</h1>
-                <h2>$10000</h2>
+                {
+                  description.length > 0 ? <h2>${description.map((el) => setTotal(el.amount))}</h2> : <h2>${total}</h2>
+                }
+                
               </div>
             
         

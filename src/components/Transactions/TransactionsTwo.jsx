@@ -1,15 +1,24 @@
 import React from 'react'
 
-export default function TransactionsTwo({amountOne, setAmountOne}) {
- 
+export default function TransactionsTwo({transactionTwo, date}) {
+
+
   return (
     <div className='transaction-wrapper'>
       <h2>
         Transactions  
-      </h2>
-      <div className='transaction-statement'>
-        <p>{amountOne}</p>
-      </div>
+      </h2>     
+        {transactionTwo.length > 0 && (
+          <> 
+            {transactionTwo.map((el) => (
+              <div className='transaction-statement'>
+                <p>{date}</p>
+                <p>{el.desc}</p>
+                <p>${el.amount}</p>
+              </div>
+            ))}
+          </>
+        )}
     </div>
   )
 }

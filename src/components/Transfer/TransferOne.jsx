@@ -1,28 +1,34 @@
 import React, {useEffect, useState, useRef} from 'react'
 
-export default function TransferOne({amountOne, setAmountOne, description, setDescription}) {
+export default function TransferOne({ amountOne, setAmountOne,  setDescription}) {
 
-    // useEffect(() => {
-    //     console.log(amountOne)
-    // }, [amountOne])
-    // const whatif = useRef(e.target.value)
+      const handleChange = (e) => {
+        const {name, value} = e.target
 
-    let submit = (e) => {
+        setAmountOne (prevState => {
+            return {
+                ...prevState,
+                [name]: value
+            }
+        })
+       
+        // console.log("value typed is", value)
+      }
+
+      const handleSubmit = (e) => {
         e.preventDefault();
-        // let keyword = e.target.elements.keyword.value;
-        console.log('submitted');
-        setAmountOne(amountOne)
+        setDescription((el) => [...el, amountOne]);
       }
 
 
   return (
     <div className='transfer-wrapper'>
-        <form onSubmit={submit}>           
+        <form onSubmit={handleSubmit}>           
             <div className='transfer-amount'>
-                <input onChange={(e) => e.target.value} value={amountOne} type="text" placeholder='+$100.00'/>                
+                <input onChange={handleChange} value={amountOne.amount} name="amount" type="number" placeholder='+$100.00'/>                
             </div>
             <div className='transfer-description'>          
-                <input type="text" placeholder='Another transaction description' onChange={(e) => setDescription(e.target.value)} value={description} />                
+                <input type="text" placeholder='Another transaction description' onChange={handleChange} name="desc" value={amountOne.desc} />                
             </div>
             <div className='transfer-button'>
                 <input type="submit" value="Transfer"/>

@@ -1,26 +1,36 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState, useRef} from 'react'
 
-export default function TransferTwo({amount, setAmount, description, setDescription}) {
+export default function TransferOne({ amountTwo, setAmountTwo, setTransactionTwo }) {
 
-    useEffect(() => {
-        console.log(description)
-    }, [description])
+      const handleChange = (e) => {
+        const {name, value} = e.target
+
+        setAmountTwo (prevState => {
+            return {
+                ...prevState,
+                [name]: value
+            }
+        })
+      }
+
+      const handleSubmit = (e) => {
+        e.preventDefault();
+        setTransactionTwo((el) => [...el, amountTwo]);
+      }
 
   return (
     <div className='transfer-wrapper'>
-        <div className='transfer-amount'>
-            <form>           
-                <input onChange={(e) => setAmount(e.target.value)} value={amount} type="text" placeholder='+$100.00'/>                
-            </form>
-        </div>
-        <div className='transfer-description'>
-            <form>           
-                <input type="text" placeholder='Another transaction description' onChange={(e) => setDescription(e.target.value)} value={description} />                
-            </form>
-        </div>
-        <div className='transfer-button'>
-            <button>TRANSFER</button>
-        </div>
+        <form onSubmit={handleSubmit}>           
+            <div className='transfer-amount'>
+                <input onChange={handleChange} value={amountTwo.amount} name="amount" type="number" placeholder='+$100.00'/>                
+            </div>
+            <div className='transfer-description'>          
+                <input type="text" placeholder='Another transaction description' onChange={handleChange} name="desc" value={amountTwo.desc} />                
+            </div>
+            <div className='transfer-button'>
+                <input type="submit" value="Transfer"/>
+            </div>
+        </form>
     </div>
   )
 }

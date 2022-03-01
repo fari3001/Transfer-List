@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../App.css'
 
-export default function AccountDetails() {
+export default function AccountDetails({transactionTwo}) {
   return (
     <div className='account-wrapper'>
         <div className='flex-wrapper'>
