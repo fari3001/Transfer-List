@@ -8,7 +8,7 @@ export default function InterfaceTwo({amountOne, setAmountOne, amountTwo, setAmo
   return (
     <div className='wrapper'>
       <div className='header'>
-          <AccountDetails amountTwo={amountTwo} total={total} setTotal={setTotal} transactionTwo={transactionTwo} />
+          <AccountDetails total={total} setTotal={setTotal} transactionTwo={transactionTwo} />
           <Transfer amountTwo={amountTwo} setAmountTwo={setAmountTwo} transactionTwo={transactionTwo} setTransactionTwo={setTransactionTwo} />
       </div>
       <div className='footer'>

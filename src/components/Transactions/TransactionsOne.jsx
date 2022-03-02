@@ -1,8 +1,6 @@
 import React from 'react'
 
 export default function TransactionsOne({amountOne, description, date}) {
-  // console.log(amountOne)
-
   
   return (
     <div className='transaction-wrapper'>

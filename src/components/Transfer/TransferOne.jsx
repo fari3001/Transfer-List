@@ -1,6 +1,6 @@
 import React, {useEffect, useState, useRef} from 'react'
 
-export default function TransferOne({ amountOne, setAmountOne,  setDescription}) {
+export default function TransferOne({ amountOne, setAmountOne, description ,setDescription, total, setTotal}) {
 
       const handleChange = (e) => {
         const {name, value} = e.target
@@ -15,9 +15,13 @@ export default function TransferOne({ amountOne, setAmountOne,  setDescription})
         // console.log("value typed is", value)
       }
 
+
       const handleSubmit = (e) => {
         e.preventDefault();
         setDescription((el) => [...el, amountOne]);
+        description.map((el) => setTotal(el.amount))
+        setTotal (prevState => Number(prevState) + Number(total))
+        console.log('total is: ' + total)
       }
 
 

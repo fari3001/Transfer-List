@@ -22,7 +22,7 @@ function App() {
   return (
     <div className="app">
       <div className='interface-wrapper'>
-        <InterfaceOne amountOne={amountOne} amountTwo={amountTwo} total={total} setTotal={setTotal} setAmountOne={setAmountOne} description={description} setDescription={setDescription}/>
+        <InterfaceOne amountOne={amountOne} amountTwo={amountTwo} total={total} setTotal={setTotal} setAmountOne={setAmountOne} description={description} setDescription={setDescription} date={date} transactionTwo={transactionTwo} />
       </div>
       <div className='interface-wrapper'>
         <InterfaceTwo amountOne={amountOne} amountTwo={amountTwo} setAmountTwo={setAmountTwo} description={description} date={date} transactionTwo={transactionTwo} setTransactionTwo={setTransactionTwo} />
