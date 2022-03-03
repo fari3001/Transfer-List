@@ -1,10 +1,20 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 
-export default function TransactionsTwo({amountTwo, transactionTwo, date}) {
+export default function TransactionsTwo({amountTwo, animationLine, setAnimationLine, transactionTwo, date}) {
+  
+//   const hello = styled.h2`
+//   &:after {
+//     content: " 🦄";
+//   }
+// `;
+
+  useEffect(() => {
+    setAnimationLine('scaleX(1)')
+  }, )
 
   return (
     <div className='transaction-wrapper'>
-      <h2>
+      <h2 style={{transform: animationLine}}>
         Transactions  
       </h2>
         { transactionTwo && 

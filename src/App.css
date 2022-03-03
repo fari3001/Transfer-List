@@ -39,6 +39,10 @@ h1, h2, p {
   justify-content: space-between;
 }
 
+.flex-wrapper {
+  color: yellow;
+}
+
 .flex-wrapper h2 {
   display: flex;
   align-items: center;
@@ -62,7 +66,7 @@ form {
 
 input {
   width: 100%;
-  padding: 12px;
+  padding: 8px 12px;
   margin: 8px 0;
   display: inline-block;
   border: none;
@@ -118,10 +122,25 @@ input[type="image"] {
   text-align: center;
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid black;
+  /* border-bottom: 1px solid black; */
   background: transparent;
+  display:block;
+  
 }
+.transaction-wrapper h2:after {
+  display: block;
+  content: '';
+  padding-top: 0.5rem;
+  border-bottom: solid 3px #019fb6; 
+    transform: scaleX(0);  
 
+}
+.transaction-wrapper h2:after {
+
+   
+    border-bottom: solid 2px black;  
+    transition: transform 2500ms ease-in-out;
+}
 
 .transaction-statement {
   display: flex;
