@@ -7,6 +7,9 @@ export default function TransactionsOne({amountOne, description, date}) {
       <h2>
         Transactions  
       </h2>     
+        { description && 
+        <div className='transaction-header'><p>Today</p></div>
+        }
         {description.length > 0 && (
           <> 
             {description.map((el) => (

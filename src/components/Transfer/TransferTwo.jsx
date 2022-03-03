@@ -1,4 +1,5 @@
 import React, {useEffect, useState, useRef} from 'react'
+import send from '../../Images/send.png'
 
 export default function TransferOne({ amountTwo, totalTwo, setAmountTwo, setTotal, setTotalTwo, setTransactionTwo }) {
 
@@ -33,7 +34,7 @@ export default function TransferOne({ amountTwo, totalTwo, setAmountTwo, setTota
                 <input type="text" placeholder='Another transaction description' onChange={handleChange} name="desc" value={amountTwo.desc} />                
             </div>
             <div className='transfer-button'>
-                <input type="submit" value="Transfer"/>
+                <input type="image" src={send} alt="Submit"/>
             </div>
         </form>
     </div>

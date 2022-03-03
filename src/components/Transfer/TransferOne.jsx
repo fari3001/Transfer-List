@@ -1,4 +1,5 @@
 import React, {useEffect, useState, useRef} from 'react'
+import send from '../../Images/send.png'
 
 export default function TransferOne({ amountOne, totalTwo,setTotalTwo, setAmountOne, description ,setDescription, total, setTotal}) {
 
@@ -22,13 +23,17 @@ export default function TransferOne({ amountOne, totalTwo,setTotalTwo, setAmount
 
     // }, [total])
 
+    console.log(amountOne)
 
       const handleSubmit = (e) => {
         e.preventDefault();
-        setDescription((el) => [...el, amountOne]);
-        const currentFigure = amountOne.amount
-        setTotal (prevState => Number(prevState) - Number(currentFigure))
-        setTotalTwo (prevState => Number(prevState) + Number(currentFigure))
+        if (amountOne.amount.length && amountOne.desc.length) {
+          e.preventDefault();
+          setDescription((el) => [...el, amountOne]);
+          const currentFigure = amountOne.amount
+          setTotal (prevState => Number(prevState) - Number(currentFigure))
+          setTotalTwo (prevState => Number(prevState) + Number(currentFigure))
+        }
       }
 
 
@@ -42,7 +47,7 @@ export default function TransferOne({ amountOne, totalTwo,setTotalTwo, setAmount
                 <input type="text" placeholder='Another transaction description' onChange={handleChange} name="desc" value={amountOne.desc} />                
             </div>
             <div className='transfer-button'>
-                <input type="submit" value="Transfer"/>
+              <input type="image" src={send} alt="Submit"/>
             </div>
         </form>
     </div>

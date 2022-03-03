@@ -6,7 +6,10 @@ export default function TransactionsTwo({amountTwo, transactionTwo, date}) {
     <div className='transaction-wrapper'>
       <h2>
         Transactions  
-      </h2>     
+      </h2>
+        { transactionTwo && 
+        <div className='transaction-header'><p>Today</p></div>
+        }     
         {transactionTwo?.length > 0 && (
           <> 
             {transactionTwo.map((el) => (
