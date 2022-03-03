@@ -4,17 +4,17 @@ import TransactionsTwo from '../Transactions/TransactionsTwo'
 import '../../App.css'
 
 
-export default function InterfaceOne({ amountOne, transactionTwo, date, total, amountTwo, setAmountOne, setTotal, setAmountTwo, description, setDescription}) {
+export default function InterfaceOne({ amountOne, transactionTwo, date, total, totalTwo, amountTwo, setAmountOne, setTotal, setTotalTwo, setAmountTwo, description, setDescription}) {
 
 
   return (
     <div className='wrapper'>
       <div className='header'>
-          <AccountDetails  total={total} setTotal={setTotal} description={description} />
-          <Transfer amountOne={amountOne} setAmountOne={setAmountOne} total={total} setTotal={setTotal} description={description} setDescription={setDescription} />
+          <AccountDetails  total={total} amountOne={amountOne} setTotal={setTotal} description={description} />
+          <Transfer amountOne={amountOne} setAmountOne={setAmountOne} total={total} setTotal={setTotal} totalTwo={totalTwo} setTotalTwo={setTotalTwo} description={description} setDescription={setDescription} />
       </div>
       <div className='footer'>
-          <TransactionsTwo  amountTwo={amountTwo} setAmountTwo={setAmountTwo} transactionTwo={transactionTwo} date={date} />
+          <TransactionsTwo  amountTwo={amountTwo} setAmountTwo={setAmountTwo} setTotal={setTotal} setTotalTwo={setTotalTwo} transactionTwo={transactionTwo} date={date} />
       </div>
     </div>
   )

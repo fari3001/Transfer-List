@@ -1,6 +1,6 @@
 import React, {useEffect, useState, useRef} from 'react'
 
-export default function TransferOne({ amountTwo, setAmountTwo, setTransactionTwo }) {
+export default function TransferOne({ amountTwo, totalTwo, setAmountTwo, setTotal, setTotalTwo, setTransactionTwo }) {
 
       const handleChange = (e) => {
         const {name, value} = e.target
@@ -16,6 +16,11 @@ export default function TransferOne({ amountTwo, setAmountTwo, setTransactionTwo
       const handleSubmit = (e) => {
         e.preventDefault();
         setTransactionTwo((el) => [...el, amountTwo]);
+        const currentFigure = amountTwo.amount
+
+        setTotal (prevState => Number(prevState) + Number(currentFigure))
+        setTotalTwo (prevState => Number(prevState) - Number(currentFigure))
+        console.log('this is the totalTwo amount ' + currentFigure)
       }
 
   return (
