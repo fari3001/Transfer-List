@@ -11,6 +11,7 @@ export default function AccountDetails({total, amountOne, setTotal, description}
   
 
   // console.log('this is the current ' + currentFigure + ' this is the total ' + total)
+  
   if (total >=  currentFigure) {
      colourConfirmation = 'white'
   } else {

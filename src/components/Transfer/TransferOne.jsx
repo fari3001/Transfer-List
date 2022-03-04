@@ -23,7 +23,6 @@ export default function TransferOne({ amountOne, totalTwo,setTotalTwo, setAmount
 
     // }, [total])
 
-    console.log(amountOne)
 
       const handleSubmit = (e) => {
         e.preventDefault();

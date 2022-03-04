@@ -20,7 +20,6 @@ function App() {
   const [totalTwo, setTotalTwo] = useState(8000)
   const current = new Date();
   const date = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
-  console.log(current)
 
   return (
     <div className="app">
