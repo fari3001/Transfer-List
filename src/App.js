@@ -21,7 +21,6 @@ function App() {
   const [totalTwo, setTotalTwo] = useState(8000)
   const current = new Date();
   const date = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
-  // console.log(current)
 
   return (
     <div className="app">
@@ -29,7 +28,7 @@ function App() {
         <InterfaceOne amountOne={amountOne} currentFigure={currentFigure} setCurrentFigure={setCurrentFigure} animationLine={animationLine} setAnimationLine={setAnimationLine} amountTwo={amountTwo} total={total} totalTwo={totalTwo} setTotal={setTotal} setTotalTwo={setTotalTwo} setAmountOne={setAmountOne} description={description} setDescription={setDescription} date={date} transactionTwo={transactionTwo} />
       </div>
       <div className='interface-wrapper'>
-        <InterfaceTwo amountOne={amountOne} amountTwo={amountTwo} setTotal={setTotal} totalTwo={totalTwo} setTotalTwo={setTotalTwo} setAmountTwo={setAmountTwo} description={description} date={date} transactionTwo={transactionTwo} setTransactionTwo={setTransactionTwo} />
+        <InterfaceTwo amountOne={amountOne} amountTwo={amountTwo} currentFigure={currentFigure} setCurrentFigure={setCurrentFigure} setTotal={setTotal} totalTwo={totalTwo} setTotalTwo={setTotalTwo} setAmountTwo={setAmountTwo} description={description} date={date} transactionTwo={transactionTwo} setTransactionTwo={setTransactionTwo} />
       </div>
     </div>
     )

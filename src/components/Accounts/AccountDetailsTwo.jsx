@@ -2,9 +2,9 @@ import React from 'react'
 import Account from '../../Accounts.json'
 import '../../App.css'
 
-export default function AccountDetails({totalTwo, amountOne, setTotal, transactionTwo}) {
+export default function AccountDetails({totalTwo, amountOne, currentFigure, setTotal, transactionTwo}) {
   const Accounts = Account.accounts
-  const currentFigure = amountOne.amount
+  // const currentFigure = amountOne.amount
   const secondClient = Accounts[1]
   let colourConfirmation = 'white'
 

@@ -1,7 +1,7 @@
 import React, {useEffect, useState, useRef} from 'react'
 import send from '../../Images/send.png'
 
-export default function TransferOne({ amountOne, totalTwo, currentFigure, setCurrentFigure,setTotalTwo, setAmountOne, description ,setDescription, total, setTotal}) {
+export default function TransferOne({ amountOne, totalTwo, setCurrentFigure, setTotalTwo, setAmountOne, description ,setDescription, total, setTotal}) {
 
       const handleChange = (e) => {
         let {name, value} = e.target
@@ -21,10 +21,12 @@ export default function TransferOne({ amountOne, totalTwo, currentFigure, setCur
         if (amountOne.amount.length && amountOne.desc.length) {
           e.preventDefault();
           setDescription((el) => [...el, amountOne]);
-          setCurrentFigure(amountOne.amount)
-          console.log(currentFigure)
-          setTotal (prevState => Number(prevState) - Number(currentFigure))
-          setTotalTwo (prevState => Number(prevState) + Number(currentFigure))
+          const dynamicFigure = amountOne.amount
+          setCurrentFigure(Number(dynamicFigure))
+          setTotal (prevState => Number(prevState) - Number(dynamicFigure))
+          setTotalTwo (prevState => Number(prevState) + Number(dynamicFigure))
+          console.log(total)
+
         }
       }
 
