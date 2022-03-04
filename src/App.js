@@ -28,7 +28,7 @@ function App() {
         <InterfaceOne amountOne={amountOne} animationLine={animationLine} setAnimationLine={setAnimationLine} amountTwo={amountTwo} total={total} totalTwo={totalTwo} setTotal={setTotal} setTotalTwo={setTotalTwo} setAmountOne={setAmountOne} description={description} setDescription={setDescription} date={date} transactionTwo={transactionTwo} />
       </div>
       <div className='interface-wrapper'>
-        {/* <InterfaceTwo amountOne={amountOne} amountTwo={amountTwo} setTotal={setTotal} totalTwo={totalTwo} setTotalTwo={setTotalTwo} setAmountTwo={setAmountTwo} description={description} date={date} transactionTwo={transactionTwo} setTransactionTwo={setTransactionTwo} /> */}
+        <InterfaceTwo amountOne={amountOne} amountTwo={amountTwo} setTotal={setTotal} totalTwo={totalTwo} setTotalTwo={setTotalTwo} setAmountTwo={setAmountTwo} description={description} date={date} transactionTwo={transactionTwo} setTransactionTwo={setTransactionTwo} />
       </div>
     </div>
     )
