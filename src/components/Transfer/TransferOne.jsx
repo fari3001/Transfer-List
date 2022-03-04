@@ -1,10 +1,10 @@
 import React, {useEffect, useState, useRef} from 'react'
 import send from '../../Images/send.png'
 
-export default function TransferOne({ amountOne, totalTwo,setTotalTwo, setAmountOne, description ,setDescription, total, setTotal}) {
+export default function TransferOne({ amountOne, totalTwo, currentFigure, setCurrentFigure,setTotalTwo, setAmountOne, description ,setDescription, total, setTotal}) {
 
       const handleChange = (e) => {
-        const {name, value} = e.target
+        let {name, value} = e.target
 
 
 
@@ -13,23 +13,16 @@ export default function TransferOne({ amountOne, totalTwo,setTotalTwo, setAmount
                 ...prevState,
                 [name]: value
             }
-        })
-       
-        // console.log("value typed is", value)
+        })       
       }
-
-    //   useEffect(() => {
-    //     console.log('total is: ' + total)
-
-    // }, [total])
-
 
       const handleSubmit = (e) => {
         e.preventDefault();
         if (amountOne.amount.length && amountOne.desc.length) {
           e.preventDefault();
           setDescription((el) => [...el, amountOne]);
-          const currentFigure = amountOne.amount
+          setCurrentFigure(amountOne.amount)
+          console.log(currentFigure)
           setTotal (prevState => Number(prevState) - Number(currentFigure))
           setTotalTwo (prevState => Number(prevState) + Number(currentFigure))
         }

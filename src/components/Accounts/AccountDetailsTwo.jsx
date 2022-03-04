@@ -8,7 +8,6 @@ export default function AccountDetails({totalTwo, amountOne, setTotal, transacti
   const secondClient = Accounts[1]
   let colourConfirmation = 'white'
 
-  console.log(currentFigure)
 
   if (totalTwo >=  currentFigure) {
     colourConfirmation = 'white'

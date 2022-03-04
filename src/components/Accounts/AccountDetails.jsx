@@ -2,16 +2,14 @@ import React from 'react'
 import Account from '../../Accounts.json'
 import '../../App.css'
 
-export default function AccountDetails({total, amountOne, setTotal, description}) {
+export default function AccountDetails({total, currentFigure,totalTwo, amountOne, setTotal, description}) {
   const Accounts = Account.accounts
-  const currentFigure = amountOne.amount
+  // const currentFigure = amountOne.amount
   const firstClient = Accounts[0]
  
   let colourConfirmation = 'white'
   
 
-  // console.log('this is the current ' + currentFigure + ' this is the total ' + total)
-  
   if (total >=  currentFigure) {
      colourConfirmation = 'white'
   } else {

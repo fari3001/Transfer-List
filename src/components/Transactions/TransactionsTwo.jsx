@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
 
-export default function TransactionsTwo({amountTwo, animationLine, setAnimationLine, transactionTwo, date}) {
+export default function TransactionsTwo({amountTwo, animationLine, currentFigure, setAnimationLine, transactionTwo, date}) {
   
 //   const hello = styled.h2`
 //   &:after {
